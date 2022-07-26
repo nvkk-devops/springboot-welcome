@@ -21,11 +21,8 @@ node('master') {
                     mvn clean install -Dmaven.test.skip=false
                     """
                 }
-                stage('Test') {
+                stage('Publish') {
                     print '******************** Publish ******************************'
-                    sh """
-                    mvn clean install -Dmaven.test.skip=false
-                    """
                 }    
             }
         }
