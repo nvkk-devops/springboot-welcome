@@ -5,7 +5,9 @@ node('master') {
                 stage('Checkout') {
                     print '******************** Checkout ******************************'
                     checkout scm
+                    sh """
                     ls -ltr
+                    """
                 }     
             }
         }
